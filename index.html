@@ -87,6 +87,17 @@
             </li>
             
             
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/linux/" class="animsition-link">linux<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/linux/mac/" class="animsition-link">mac<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
             
             <li>
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
@@ -200,6 +211,51 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/06/13/linux文件权限/">linux文件权限</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-06-13T08:13:25.000Z" itemprop="datePublished">
+          2017-06-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/linux/'>linux</a>,
+    
+    <a href='/tags/mac/'>mac</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        ls -l中显示的内容如下：
+-rwxrw-r‐-1 webapp weblogic1 1213 Feb 2 09:39 abc.jsp
+
+10个字符确定不同用户能对文件干什么
+第一个字符代表文件（-）、目录（d），链接（l）
+其余字符每3个一组（rwx），读（r）、写（w）、执行（x）
+第一组rwx：文件所有者的权限是读、写和执行
+第二组rw-：与文件所有者同一组的用户的权限是读、写但不能执行
+第三组r–：不与文件所有者同组的其他用户
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/06/13/linux文件权限/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
