@@ -17,20 +17,20 @@
 <!--<![endif]-->
 
 <head>
-  <title>linux文件权限 | Hexo</title>
+  <title>Hello World | Hacoonar&#39;s blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Hexo">
-    <meta name="author" content="John Doe">
+    <meta name="generator" content="Hacoonar's blog">
+    <meta name="author" content="Hacoonar">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
 
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Hacoonar&#39;s blog" type="application/atom+xml">
     <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
     
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
@@ -75,17 +75,6 @@
             <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
             <!-- Dropdown Menu -->
 			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                </ul>
-            </li>
-            
             
         	<li>
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
@@ -103,9 +92,9 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    <li><a href="https://github.com" class="animsition-link">github</a></li>
                     
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    <li><a href="https://www.zybuluo.com/mdeditor" class="animsition-link">Cmd Markdown</a></li>
                     
                 </ul>
             </li>
@@ -140,22 +129,16 @@
                     <!-- Info-bar -->
                     <nav>
                         <ul class="nav">
-                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li><a href="/" class="animsition-link">Hacoonar's blog</a></li>
                             <li class="nolink"><span>Always </span>Creative.</li>
                             
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            <li><a href="https://github.com/hacoonar" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
                             
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
                             
                             
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
                             
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <li><a href="http://weibo.com/hacoonar" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
                             
                             <li class="nolink"><span>Welcome!</span></li>
                         </ul>
@@ -183,53 +166,34 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-06-13T08:13:25.000Z" itemprop="datePublished">
-          2017-06-13
+      <time datetime="2017-06-12T09:08:04.000Z" itemprop="datePublished">
+          2017-06-12
       </time>
     
-    
-    | 
-    <a href='/tags/linux/'>linux</a>,
-    
-    <a href='/tags/mac/'>mac</a>
-    
-    
 </span>
-                <h1>linux文件权限</h1>
+                <h1>Hello World</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>ls -l中显示的内容如下：</p>
-<p>-rwxrw-r‐-1 webapp weblogic1 1213 Feb 2 09:39 abc.jsp</p>
-<ul>
-<li>10个字符确定不同用户能对文件干什么</li>
-<li>第一个字符代表文件（-）、目录（d），链接（l）</li>
-<li>其余字符每3个一组（rwx），读（r）、写（w）、执行（x）</li>
-<li>第一组rwx：文件所有者的权限是读、写和执行</li>
-<li>第二组rw-：与文件所有者同一组的用户的权限是读、写但不能执行</li>
-<li>第三组r–：不与文件所有者同组的其他用户的权限是读不能写和执行</li>
-</ul>
-<p>也可用数字表示为：r=4，w=2，x=1  因此rwx=4+2+1=7</p>
-<ul>
-<li>1 表示连接的文件数</li>
-<li>ebaoapp 表示用户</li>
-<li>weblogic1表示用户所在的组</li>
-<li>1213 表示文件大小（字节）</li>
-<li>Feb 2 09:39 表示最后修改日期</li>
-<li>abc.jsp 表示文件名</li>
-</ul>
-<p>改变权限的命令<br>chmod 改变文件或目录的权限<br>chmod 755 abc：赋予abc权限rwxr-xr-x<br>chmod u=rwx，g=rx，o=rx abc：同上u=用户权限，g=组权限，o=不同组其他用户权限<br>chmod u-x，g+w abc：给abc去除用户执行的权限，增加组写的权限<br>chmod a+r abc：给所有用户添加读的权限</p>
-<p>改变所有者（chown）和用户组（chgrp）命令<br>chown xiaoming abc：改变abc的所有者为xiaoming</p>
+      		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    
-    <a class="pull-right" href="/2017/06/12/hello-world/">
-        Hello World →
+    <a class="pull-left" href="/20170613/linux文件权限/" style="float: left;">
+        ← linux文件权限
     </a>
+    
     
 </nav>
 
@@ -248,26 +212,20 @@
     <div class="container">
             <div class="copy">
                 <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Hacoonar. All Rights Reserved.
                 </p>
                 <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>
                     
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    <li><a href="https://github.com/hacoonar" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
                     
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    <li><a href="http://weibo.com/hacoonar" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
                     
                 </ul>
             </div>
